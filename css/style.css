@@ -1,0 +1,76 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+:root {
+    --natt: #233D4D;
+    --höst: #FE7F2D;
+    --sol: #FCCA46;
+    --gräss: #A1C181;
+    --skog: #619B8A;
+}
+
+body {
+    font-family: Roboto;
+    color: var(--natt);
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 500px;
+    min-height: 100%;
+}
+
+.qoute {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 862px;
+    height: 464px;
+    padding: 16px;
+    border: 5px solid var(--sol);
+    border-radius: 16px;
+}
+
+.qoute::before {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    content: '';
+    background-image: url(../icons/quote-left.svg);
+    height: 75px;
+    width: 105px;
+    background-repeat: no-repeat;
+}
+.qoute::after {
+    position: absolute;
+    bottom: -50px;
+    right: 20px;
+    content: '';
+    background-image: url(../icons/quote-right.svg);
+    height: 75px;
+    width: 105px;
+    background-repeat: no-repeat;
+}
+
+.qoute .qoute-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    font-size: 6rem;
+    font-weight: 900;
+}
+
+.qoute p {
+    font-family: Roboto;
+    font-size: 2rem;
+}
