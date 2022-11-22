@@ -13,3 +13,8 @@
   src: url(../Fonts/Rock_Salt/RockSalt-Regular.ttf);
   font-weight: 400;
 }
+
+
+h1 {
+    font-family: "Rock Salt";
+}
