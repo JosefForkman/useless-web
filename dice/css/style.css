@@ -1,0 +1,104 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+}
+
+:root {
+    --cl-main: hsl(0, 79%, 72%);
+    --cl-main-dark: hsl(0, 79%, 62%);
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dice {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    width: 200px;
+    height: 200px;
+    background-color: var(--cl-main);
+    padding: 1rem;
+    border-radius: .5rem;
+    box-sizing: border-box;
+}
+
+.dice span {
+    position: relative;
+    background-color: var(--cl-main-dark);
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+
+    box-shadow: inset 8px 8px 10px var(--cl-main);
+}
+
+.dice[data-side="1"] {
+    grid-template-areas:
+        ". . ."
+        ". dot5 ."
+        ". . ."
+        ;
+}
+.dice[data-side="2"] {
+    grid-template-areas:
+        "dot1 . ."
+        ". . ."
+        ". . dot2"
+        ;
+}
+.dice[data-side="3"] {
+    grid-template-areas:
+        "dot1 . ."
+        ". dot2 ."
+        ". . dot3"
+        ;
+}
+.dice[data-side="4"] {
+    grid-template-areas:
+        "dot1 . dot2"
+        ". . ."
+        "dot3 . dot4"
+        ;
+}
+.dice[data-side="5"] {
+    grid-template-areas:
+        "dot1 . dot2"
+        ". dot3 ."
+        "dot4 . dot5"
+        ;
+}
+.dice[data-side="6"] {
+    grid-template-areas:
+        "dot1 . dot2"
+        "dot3 . dot4"
+        "dot5 . dot6"
+        ;
+}
+
+.dice span:nth-child(1) {
+    grid-area: dot1;
+}
+.dice span:nth-child(2) {
+    grid-area: dot2;
+}
+.dice span:nth-child(3) {
+    grid-area: dot3;
+}
+.dice span:nth-child(4) {
+    grid-area: dot4;
+}
+.dice span:nth-child(5) {
+    grid-area: dot5;
+}
+.dice span:nth-child(6) {
+    grid-area: dot6;
+}
+
