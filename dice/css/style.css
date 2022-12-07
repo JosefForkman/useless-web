@@ -7,6 +7,9 @@
 :root {
     --cl-main: hsl(0, 79%, 72%);
     --cl-main-dark: hsl(0, 79%, 62%);
+
+    --natt: #233D4D;
+    --skog: #619B8A;
 }
 
 body, html {
@@ -16,15 +19,12 @@ body, html {
 main {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
 
-    width: 75%;
+    /* width: 75%; */
     min-height: 100vh;
-    margin: 0 auto;
-}
-
-main input {
-
+    margin: 0 24px;
+    margin-top: 32px;
 }
 
 .continer {
@@ -40,7 +40,7 @@ main input {
 
     width: 100%;
     aspect-ratio: 1 / 1;
-    background-color: var(--cl-main);
+    background-color: var(--skog);
     padding: 1rem;
     border-radius: .5rem;
     box-sizing: border-box;
@@ -48,13 +48,13 @@ main input {
 
 .dice span {
     position: relative;
-    background-color: var(--cl-main-dark);
+    background-color: var(--natt);
     width: 100%;
     height: 100%;
 
     border-radius: 50%;
 
-    box-shadow: inset 8px 8px 10px var(--cl-main);
+    /* box-shadow: inset 8px 8px 10px var(--cl-main); */
 }
 
 .dice[data-side="1"] {
@@ -119,3 +119,58 @@ main input {
     grid-area: dot6;
 }
 
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: calc(21px + 16px);
+}
+
+/* Input */
+input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%; /* Specific width is required for Firefox. */
+    background: var(--skog); /* Otherwise white in Chrome */
+    border-radius: 8px;
+    height: .8rem;
+  }
+
+  input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-color: var(--natt);
+    border: none;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: var(--natt);
+    border: none;
+    width: 1rem;
+    height: 1rem;
+    scale: 1.8;
+    border-radius: 50%;
+  }
+
+  input[type=range]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+
+  @media screen and (min-width: 800px) {
+    main {
+        margin: 0 80px;
+        margin-top: 32px;
+    }
+  }
