@@ -1,24 +1,38 @@
 <!DOCTYPE html>
-<html lang="se">
+<html lang="en">
     <head>
-        <meta charset='UTF-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel='stylesheet' href='css/typogrofy.css'>
-        <link rel='stylesheet' href='css/style.css'>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/typogrofy.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <!-- https://www.vecteezy.com/vector-art/379555-dice-six-vector-icon -->
+        <link rel="icon" type="image/x-icon" href="./img/icon.svg" />
+
         <title>Dice</title>
     </head>
     <body>
         <main>
-            <h1>Useless dice</h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Tempor morbi eget odio commodo blandit netus feugiat sit. Diam diam lacus pharetra eu varius pharetra nam semper eu. Quis morbi quam dictum ultrices sed neque quam. Libero nunc tincidunt nec <strong>6</strong> nunc nunc. Platea amet turpis ridiculus feugiat egestas tempus sit.</p>
-            <form>
+            <h1>Useless Diccces</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur. Tempor morbi eget odio
+                commodo blandit netus feugiat sit. Diam diam lacus pharetra eu
+                varius pharetra nam semper eu. Quis morbi quam dictum ultrices
+                sed neque quam. Libero nunc tincidunt nec
+                <strong>4</strong> nunc nunc. Platea amet turpis ridiculus
+                feugiat egestas tempus sit.
+            </p>
+            <form aria-label="Game difficulty form">
                 <label for="antal">Select how manny dices:</label>
-                <input type="range" min="1" max="200" value="10" id="antal">
+                <input type="range" min="1" max="200" value="10" id="antal" />
             </form>
 
-            <div class="continer"></div>
+            <section aria-label="Game continer" class="continer"></section>
         </main>
 
-        <script src="js/script.js"></script>
+        <script src="js/dice.js"></script>
+        <script src="js/game.js"></script>
     </body>
 </html>

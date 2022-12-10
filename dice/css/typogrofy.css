@@ -1,3 +1,11 @@
+:root {
+  --main-font: "Roboto";
+
+  --fs-weight-300: 300;
+  --fs-weight-400: 400;
+  --fs-weight-800: 800;
+  --fs-weight-900: 900;
+}
 @font-face {
   font-family: Roboto;
   src: url(../Fonts/Roboto/Roboto-Black.ttf);
@@ -25,31 +33,32 @@
 }
 
 body {
-    font-family: Roboto;
+    font-family: var(--main-font);
     color: var(--natt);
 }
 
 h1 {
-    font-family: "Roboto";
-    font-weight: bold;
+    font-family: var(--main-font);
+    font-weight: var(--fs-weight-800);
     font-size: 1.56rem;
 }
 
 p {
-    font-family: Roboto;
-    font-weight: 300;
+    font-family: var(--main-font);
+    font-weight: var(--fs-weight-300);
     font-size: 1rem;
     line-height: 1.4;
     letter-spacing: 1px;
 }
 
 strong {
-    font-weight: bold;
+    font-weight: var(--fs-weight-800);
     font-size: 1rem;
 }
 
 form label {
-    font-weight: bold;
+    font-family: var(--main-font);
+    font-weight: var(--fs-weight-800);
     font-size: 1rem;
 }
 

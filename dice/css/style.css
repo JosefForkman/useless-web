@@ -10,6 +10,7 @@
 
     --natt: #233D4D;
     --skog: #619B8A;
+    --sol: #FCCA46;
 }
 
 body, html {
@@ -24,7 +25,8 @@ main {
     /* width: 75%; */
     min-height: 100vh;
     margin: 0 24px;
-    margin-top: 32px;
+    padding-top: 32px;
+    box-sizing: border-box;
 }
 
 .continer {
@@ -46,6 +48,10 @@ main {
     box-sizing: border-box;
 }
 
+.dice.active {
+    background-color: var(--sol);
+}
+
 .dice span {
     position: relative;
     background-color: var(--natt);
@@ -53,8 +59,6 @@ main {
     height: 100%;
 
     border-radius: 50%;
-
-    /* box-shadow: inset 8px 8px 10px var(--cl-main); */
 }
 
 .dice[data-side="1"] {
@@ -154,7 +158,8 @@ input[type=range] {
   }
 
   input[type=range]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    outline: 2px solid var(--sol);
+    outline-offset: .5rem;
   }
 
   input[type=range]::-ms-track {
@@ -171,6 +176,7 @@ input[type=range] {
   @media screen and (min-width: 800px) {
     main {
         margin: 0 80px;
-        margin-top: 32px;
+        padding-top: 32px;
+        box-sizing: border-box;
     }
   }
