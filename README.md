@@ -24,6 +24,3 @@ Tested by the following people:
 1. Jane Doe
 2. John Doe
 
-# API 
-- [Useless facts](https://uselessfacts.jsph.pl/)
-- 
